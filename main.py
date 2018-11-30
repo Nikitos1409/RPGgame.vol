@@ -1,11 +1,11 @@
-import player
-import monster
+import player #импортируем player 
+import monster # импортируем monster
 def title_screen_selection():
-  ALLOWD_COMMANDS = ["play", "exit"]
+  ALLOWD_COMMANDS = ["play", "exit"]#список разрешенных команд
 
-  command = input("@> ").lower()
+  command = input("@> ").lower()#приводит к нижнему регистру
 
-  if command in ALLOWD_COMMANDS:
+  if command in ALLOWD_COMMANDS:#(если команда есть в списке команд)
     print(command)
   
   else:
@@ -19,3 +19,4 @@ def get_play():
 
   pl = player.Player(name,straight,hp)
   mn = monster.Monster(name,type,strenght,hp)
+
